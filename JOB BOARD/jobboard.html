@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Board — Find Your Dream Job</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="jobboard.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">J</div>
+      <div class="brand-text">
+        <span class="brand-name">Job Board</span>
+        <span class="brand-tag">find your dream job</span>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="menu" id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#jobs">Browse Job</a>
+      <div class="has-dropdown">
+        <a href="#">Pages ▾</a>
+        <div class="dropdown">
+          <a href="#">About</a>
+          <a href="#">Pricing</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="#blog">Blog ▾</a>
+        <div class="dropdown">
+          <a href="#blog">Blog List</a>
+          <a href="#blog">Blog Single</a>
+        </div>
+      </div>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="login-link">Log In</a>
+      <a href="#post" class="btn btn-green">Post A Job</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="stat-pill">● 4,536+ Jobs Listed</span>
+      <h1>Find your Dream Job</h1>
+      <p class="lede">Search thousands of open roles across every industry, filter by location and category, and apply in a couple of clicks — no account required to start browsing.</p>
+      <div class="cta-row">
+        <a href="#jobs" class="btn btn-green">Upload Your Resume</a>
+        <a href="#post" class="btn btn-outline-light">Post A Job</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <!-- Original bulletin-board illustration, not a copy of the reference graphic -->
+      <svg viewBox="0 0 420 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a bulletin board with pinned job listing cards">
+        <rect x="30" y="20" width="360" height="360" rx="10" fill="#16223B" stroke="#3FBE72" stroke-width="1.5" stroke-opacity="0.4"/>
+        <g>
+          <rect x="60" y="55" width="130" height="90" rx="6" fill="#FBF7EE" transform="rotate(-4 125 100)"/>
+          <circle cx="125" cy="70" r="5" fill="#FF6B4A" transform="rotate(-4 125 100)"/>
+          <rect x="75" y="90" width="100" height="8" rx="4" fill="#16213A" opacity="0.15" transform="rotate(-4 125 100)"/>
+          <rect x="75" y="106" width="70" height="8" rx="4" fill="#16213A" opacity="0.1" transform="rotate(-4 125 100)"/>
+        </g>
+        <g>
+          <rect x="220" y="45" width="140" height="95" rx="6" fill="#FBF7EE" transform="rotate(3 290 92)"/>
+          <circle cx="290" cy="60" r="5" fill="#3FBE72" transform="rotate(3 290 92)"/>
+          <rect x="238" y="82" width="104" height="8" rx="4" fill="#16213A" opacity="0.15" transform="rotate(3 290 92)"/>
+          <rect x="238" y="98" width="80" height="8" rx="4" fill="#16213A" opacity="0.1" transform="rotate(3 290 92)"/>
+        </g>
+        <g>
+          <rect x="70" y="190" width="150" height="100" rx="6" fill="#FBF7EE" transform="rotate(2 145 240)"/>
+          <circle cx="145" cy="205" r="5" fill="#FF6B4A" transform="rotate(2 145 240)"/>
+          <rect x="88" y="228" width="112" height="8" rx="4" fill="#16213A" opacity="0.15" transform="rotate(2 145 240)"/>
+          <rect x="88" y="244" width="86" height="8" rx="4" fill="#16213A" opacity="0.1" transform="rotate(2 145 240)"/>
+        </g>
+        <g>
+          <rect x="230" y="200" width="130" height="90" rx="6" fill="#FBF7EE" transform="rotate(-3 295 245)"/>
+          <circle cx="295" cy="215" r="5" fill="#3FBE72" transform="rotate(-3 295 245)"/>
+          <rect x="246" y="238" width="98" height="8" rx="4" fill="#16213A" opacity="0.15" transform="rotate(-3 295 245)"/>
+          <rect x="246" y="254" width="72" height="8" rx="4" fill="#16213A" opacity="0.1" transform="rotate(-3 295 245)"/>
+        </g>
+        <rect x="150" y="310" width="120" height="34" rx="17" fill="#3FBE72"/>
+        <text x="210" y="332" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#0F1A2E" font-weight="600">Now Hiring</text>
+      </svg>
+    </div>
+  </div>
+
+
+<!-- ============ CATEGORIES ============ -->
+<section id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Browse by category</span>
+      <h2>Popular Job Categories</h2>
+      <p>Jump straight to the roles you're qualified for, grouped by field.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="cat-icon">IT</div><h3>Engineering &amp; IT</h3><span class="cat-count">1,204 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">DS</div><h3>Design</h3><span class="cat-count">386 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">MK</div><h3>Marketing</h3><span class="cat-count">512 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">SL</div><h3>Sales</h3><span class="cat-count">647 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">FN</div><h3>Finance</h3><span class="cat-count">298 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">HC</div><h3>Healthcare</h3><span class="cat-count">411 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">ED</div><h3>Education</h3><span class="cat-count">173 jobs</span></div>
+      <div class="cat-card"><div class="cat-icon">OP</div><h3>Operations</h3><span class="cat-count">265 jobs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED JOBS (ticket-stub cards) ============ -->
+<section class="section-alt" id="jobs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Fresh off the board</span>
+      <h2>Latest Job Listings</h2>
+      <p>Newly posted openings from companies actively hiring right now.</p>
+    </div>
+    <div class="job-grid">
+      <div class="ticket">
+        <div class="ticket-stub"><span class="ticket-logo">A</span><span class="ticket-type">FULL-TIME</span></div>
+        <div class="ticket-body">
+          <h3>Senior Front-End Developer</h3>
+          <div class="ticket-company">Acme Digital</div>
+          <div class="ticket-meta"><span>📍 Remote</span><span>💰 $85k–$110k</span></div>
+          <div class="ticket-footer"><span class="ticket-posted">Posted 2 days ago</span><a href="#" class="ticket-apply">Apply →</a></div>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="ticket-stub"><span class="ticket-logo">N</span><span class="ticket-type">FULL-TIME</span></div>
+        <div class="ticket-body">
+          <h3>Product Designer</h3>
+          <div class="ticket-company">Northline Co.</div>
+          <div class="ticket-meta"><span>📍 Chennai, IN</span><span>💰 ₹9L–₹14L</span></div>
+          <div class="ticket-footer"><span class="ticket-posted">Posted 3 days ago</span><a href="#" class="ticket-apply">Apply →</a></div>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="ticket-stub"><span class="ticket-logo">F</span><span class="ticket-type">CONTRACT</span></div>
+        <div class="ticket-body">
+          <h3>Growth Marketing Manager</h3>
+          <div class="ticket-company">Fieldwork Studio</div>
+          <div class="ticket-meta"><span>📍 Remote</span><span>💰 $60/hr</span></div>
+          <div class="ticket-footer"><span class="ticket-posted">Posted 5 days ago</span><a href="#" class="ticket-apply">Apply →</a></div>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="ticket-stub"><span class="ticket-logo">B</span><span class="ticket-type">PART-TIME</span></div>
+        <div class="ticket-body">
+          <h3>Sales Development Rep</h3>
+          <div class="ticket-company">Basecamp Digital</div>
+          <div class="ticket-meta"><span>📍 Bengaluru, IN</span><span>💰 ₹4L–₹6L</span></div>
+          <div class="ticket-footer"><span class="ticket-posted">Posted 1 week ago</span><a href="#" class="ticket-apply">Apply →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-dark" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The process</span>
+      <h2>How It Works</h2>
+      <p>Four steps from first search to first day.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step"><div class="step-num">01</div><h3>Create a Profile</h3><p>Upload your resume and set your job preferences in under two minutes.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Search &amp; Filter</h3><p>Narrow thousands of listings by keyword, location, and category.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Apply</h3><p>Submit your application directly, or get routed to the employer's own form.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Get Hired</h3><p>Track your applications and hear back from employers in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPANIES ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Trusted by</span>
+      <h2>Companies Hiring Now</h2>
+      <p>A few of the teams currently posting open roles.</p>
+    </div>
+    <div class="company-grid">
+      <div class="company-logo">Acme</div>
+      <div class="company-logo">Northline</div>
+      <div class="company-logo">Fieldwork</div>
+      <div class="company-logo">Basecamp</div>
+      <div class="company-logo">Coastal</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Success stories</span>
+      <h2>What Our Users Say</h2>
+      <p>From job seekers who found work, and employers who found great hires.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"I found and started a new role within three weeks of posting my resume — the category filters saved me so much time."</p>
+        <div class="testi-person"><div class="avatar-mono">JT</div><div><div class="testi-name">Jordan Tate</div><div class="testi-role">Front-End Developer</div></div></div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"We filled two open engineering roles in under a month. The listing tools made it simple to manage applicants."</p>
+        <div class="testi-person"><div class="avatar-mono">SK</div><div><div class="testi-name">Sara Kim</div><div class="testi-role">Hiring Manager, Northline Co.</div></div></div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"Clean listings, honest salary ranges, and no spam applications — exactly what a job board should be."</p>
+        <div class="testi-person"><div class="avatar-mono">RP</div><div><div class="testi-name">Raj Patel</div><div class="testi-role">Product Designer</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section id="post">
+  <div class="wrap">
+    <div class="cta-banner">
+      <h2>Have an open role? Get it in front of thousands of candidates today.</h2>
+      <a href="#" class="btn btn-navy">Post A Job →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="section-alt" id="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">From the blog</span>
+      <h2>Career &amp; Hiring Advice</h2>
+      <p>Notes on job searching, interviewing, and building a hiring pipeline that works.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#2F9E5B,#0F1A2E);"></div>
+        <div class="blog-card-body">
+          <span class="blog-date">June 2026</span>
+          <h3>Writing a Resume That Actually Gets Read</h3>
+          <p>Five small changes that made a measurable difference in response rates.</p>
+          <a href="#" class="blog-link">Read more →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#FF6B4A,#0F1A2E);"></div>
+        <div class="blog-card-body">
+          <span class="blog-date">May 2026</span>
+          <h3>What Great Job Descriptions Have in Common</h3>
+          <p>How to write listings that attract the right candidates, not just more of them.</p>
+          <a href="#" class="blog-link">Read more →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#16223B,#3FBE72);"></div>
+        <div class="blog-card-body">
+          <span class="blog-date">April 2026</span>
+          <h3>Salary Transparency: Why It's Worth It</h3>
+          <p>What we saw happen to application quality after we required salary ranges.</p>
+          <a href="#" class="blog-link">Read more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom:14px;">
+          <div class="brand-mark">J</div>
+          <div class="brand-text"><span class="brand-name" style="color:#FBF7EE;">Job Board</span></div>
+        </div>
+        <p style="font-size:0.85rem; max-width:32ch; opacity:0.75;">Connecting job seekers and employers with clean, honest listings.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#jobs">Browse Jobs</a>
+        <a href="#post">Post a Job</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#categories">Engineering</a>
+        <a href="#categories">Design</a>
+        <a href="#categories">Marketing</a>
+        <a href="#categories">Sales</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Job Board. All rights reserved.</span>
+      <div style="display:flex; gap:16px;">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter/X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 720) {
+        e.preventDefault();
+        link.parentElement.classList.toggle('open');
+      }
+    });
+  });
+  navMenu.querySelectorAll('a:not(.has-dropdown > a)').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>

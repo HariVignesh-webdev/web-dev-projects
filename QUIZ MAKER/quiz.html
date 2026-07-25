@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workplace Wellness Check — Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quizstyles.css">
+</head>
+<body>
+
+<div class="bg-blob b1"></div>
+<div class="bg-blob b2"></div>
+<div class="bg-blob b3"></div>
+
+<div class="quiz-shell">
+
+  <div class="quiz-card">
+
+    <!-- context-relevant decorative icon, changes per question -->
+    <div class="theme-icon" id="themeIcon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C9 7 7 10 7 13a5 5 0 0 0 10 0c0-3-2-6-5-10Z" stroke="#0E7C7B" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M12 13v6" stroke="#0E7C7B" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- ===== START SCREEN ===== -->
+    <div class="screen active" id="startScreen">
+      <div class="start-screen">
+        <h1>Workplace Wellness Check</h1>
+        <p>A short, honest check-in on how you're really doing — movement, rest, and stress, all in one place.</p>
+        <div class="start-meta">
+          <span>⏱ 2 min</span>
+          <span>❓ 5 questions</span>
+        </div>
+        <button class="btn-start" id="startBtn">Start Quiz</button>
+      </div>
+    </div>
+
+    <!-- ===== QUIZ SCREEN ===== -->
+    <div class="screen" id="quizScreen">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-label" id="progressLabel">Question 1/5</span>
+
+      <h2 class="question-text" id="questionText"></h2>
+
+      <div class="options-list" id="optionsList"></div>
+
+      <div class="quiz-actions">
+        <button class="btn-next" id="nextBtn">Next →</button>
+      </div>
+    </div>
+
+    <!-- ===== RESULTS SCREEN ===== -->
+    <div class="screen" id="resultsScreen">
+      <div class="results-screen">
+        <div class="score-ring" id="scoreRing">
+          <div class="score-ring-inner">
+            <span class="num" id="scoreNum">0</span>
+            <span class="den">out of 15</span>
+          </div>
+        </div>
+        <h2 id="resultTitle">Your Result</h2>
+        <p id="resultMessage"></p>
+        <div class="results-actions">
+          <button class="btn-outline" id="retakeBtn">Retake Quiz</button>
+          <button class="btn-start" id="doneBtn">Done</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const questions = [
+    {
+      text: "Have you practiced any physical activity outside of your working hours for at least 30 minutes in the last month?",
+      icon: `<path d="M12 3C9 7 7 10 7 13a5 5 0 0 0 10 0c0-3-2-6-5-10Z" stroke="#0E7C7B" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 13v6" stroke="#0E7C7B" stroke-width="1.6" stroke-linecap="round"/>`,
+      options: [
+        { label: "3 times or more per week", points: 3 },
+        { label: "1 or 2 times per week", points: 2 },
+        { label: "Less than 4 times per month", points: 1 },
+        { label: "I didn't exercise at all during the month", points: 0 }
+      ]
+    },
+    {
+      text: "How many glasses of water do you drink on a typical work day?",
+      icon: `<path d="M12 2.5s6 7 6 11.5a6 6 0 0 1-12 0c0-4.5 6-11.5 6-11.5Z" stroke="#0E7C7B" stroke-width="1.6" stroke-linejoin="round"/>`,
+      options: [
+        { label: "8 or more", points: 3 },
+        { label: "5 to 7", points: 2 },
+        { label: "2 to 4", points: 1 },
+        { label: "1 or fewer", points: 0 }
+      ]
+    },
+    {
+      text: "How would you describe your sleep over the last two weeks?",
+      icon: `<path d="M20 14.5a8 8 0 1 1-9-11.5 7 7 0 0 0 9 11.5Z" stroke="#0E7C7B" stroke-width="1.6" stroke-linejoin="round"/>`,
+      options: [
+        { label: "Consistently 7–9 hours, restful", points: 3 },
+        { label: "Mostly enough, occasionally short", points: 2 },
+        { label: "Often less than 6 hours", points: 1 },
+        { label: "Irregular or frequently disrupted", points: 0 }
+      ]
+    },
+    {
+      text: "How often do you take a break away from your screen during the workday?",
+      icon: `<rect x="3.5" y="5" width="17" height="12" rx="1.6" stroke="#0E7C7B" stroke-width="1.6"/><path d="M9 20h6" stroke="#0E7C7B" stroke-width="1.6" stroke-linecap="round"/>`,
+      options: [
+        { label: "Every hour or so", points: 3 },
+        { label: "A few times a day", points: 2 },
+        { label: "Once, if at all", points: 1 },
+        { label: "Rarely or never", points: 0 }
+      ]
+    },
+    {
+      text: "Which best describes your stress level over the past month?",
+      icon: `<path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3.4A5 5 0 0 1 21 11c-2 4.6-9 9-9 9Z" stroke="#0E7C7B" stroke-width="1.6" stroke-linejoin="round"/>`,
+      options: [
+        { label: "Low — I feel generally in control", points: 3 },
+        { label: "Manageable — some stressful days", points: 2 },
+        { label: "High — frequent stress most days", points: 1 },
+        { label: "Very high — feeling overwhelmed often", points: 0 }
+      ]
+    }
+  ];
+
+  const letters = ["A","B","C","D"];
+  let current = 0;
+  let selectedPoints = null;
+  let totalScore = 0;
+
+  const startScreen = document.getElementById('startScreen');
+  const quizScreen = document.getElementById('quizScreen');
+  const resultsScreen = document.getElementById('resultsScreen');
+  const themeIcon = document.getElementById('themeIcon');
+  const progressFill = document.getElementById('progressFill');
+  const progressLabel = document.getElementById('progressLabel');
+  const questionText = document.getElementById('questionText');
+  const optionsList = document.getElementById('optionsList');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function showScreen(el){
+    [startScreen, quizScreen, resultsScreen].forEach(s => s.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function renderQuestion(){
+    const q = questions[current];
+    selectedPoints = null;
+    nextBtn.classList.remove('enabled');
+    nextBtn.textContent = current === questions.length - 1 ? 'See Results →' : 'Next →';
+
+    progressFill.style.width = ((current + 1) / questions.length * 100) + '%';
+    progressLabel.textContent = `Question ${current + 1}/${questions.length}`;
+    questionText.textContent = q.text;
+    themeIcon.innerHTML = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">${q.icon}</svg>`;
+
+    optionsList.innerHTML = '';
+    q.options.forEach((opt, i) => {
+      const row = document.createElement('button');
+      row.className = 'option-row';
+      row.setAttribute('type', 'button');
+      row.innerHTML = `<span class="option-badge">${letters[i]}</span><span>${opt.label}</span>`;
+      row.addEventListener('click', () => {
+        document.querySelectorAll('.option-row').forEach(r => r.classList.remove('selected'));
+        row.classList.add('selected');
+        selectedPoints = opt.points;
+        nextBtn.classList.add('enabled');
+      });
+      optionsList.appendChild(row);
+    });
+  }
+
+  function showResults(){
+    const pct = Math.round((totalScore / 15) * 100);
+    document.getElementById('scoreRing').style.setProperty('--pct', pct);
+    document.getElementById('scoreNum').textContent = totalScore;
+
+    let title, message;
+    if (totalScore >= 12){
+      title = "You're Thriving";
+      message = "Your habits around movement, rest, and stress are in a strong place. Keep doing what's working.";
+    } else if (totalScore >= 8){
+      title = "On Track";
+      message = "You're managing well overall, with a little room to firm up sleep, movement, or stress habits.";
+    } else if (totalScore >= 4){
+      title = "Room to Improve";
+      message = "A few small, consistent changes — an extra walk, an earlier bedtime — could make a real difference.";
+    } else {
+      title = "Time to Recharge";
+      message = "Things look stretched right now. Consider starting with one small habit and building from there.";
+    }
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultMessage').textContent = message;
+
+    showScreen(resultsScreen);
+  }
+
+  document.getElementById('startBtn').addEventListener('click', () => {
+    current = 0;
+    totalScore = 0;
+    renderQuestion();
+    showScreen(quizScreen);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (selectedPoints === null) return;
+    totalScore += selectedPoints;
+    if (current < questions.length - 1){
+      current++;
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  });
+
+  document.getElementById('retakeBtn').addEventListener('click', () => {
+    current = 0;
+    totalScore = 0;
+    renderQuestion();
+    showScreen(quizScreen);
+  });
+
+  document.getElementById('doneBtn').addEventListener('click', () => {
+    showScreen(startScreen);
+  });
+</script>
+
+</body>
+</html>

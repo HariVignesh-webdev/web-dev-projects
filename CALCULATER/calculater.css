@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.whole{
+    background-color: skyblue;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+.cal{
+    background-color:lightgrey;
+    height: 560px;
+    width: 450px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 4px solid black;
+    
+}
+.display{
+    background-color: black;
+    width: 430px;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end; 
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: 410px;
+    width: 430px;
+}
+.buttons button{
+    background-color:black;
+    color: whitesmoke;
+    font-size: x-large;
+    border-radius: 5%;
+}
+#c{
+    color: brown;
+}
+#green{
+    color: lawngreen;
+}
+
+#delete{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color: greenyellow;
+    border-radius: 0px 0px 10px;
+    border:1px solid greenyellow;
+}

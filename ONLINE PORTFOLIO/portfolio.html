@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morgan Reyes — Software Developer &amp; Systems Lecturer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="brand-name">Morgan Reyes</span>
+      <span class="brand-tag">// software developer &amp; ICT lecturer</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="menu" id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#services">Services</a>
+      <a href="#skill">Skill</a>
+      <a href="#testimonial">Testimonial</a>
+      <a href="#experience">Experience</a>
+      <a href="#works">Works</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">$ whoami</span>
+      <h1>Morgan&nbsp;Reyes</h1>
+      <div class="role">Software Developer — ICT Systems Lecturer</div>
+      <p class="lede">I design and ship reliable web software, and spend the rest of my week teaching the next generation of developers how systems actually work. Five years across production code and the classroom.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-solid">Hire Me →</a>
+        <a href="#about" class="btn btn-outline">Download Résumé</a>
+      </div>
+    </div>
+    <div class="avatar-panel">
+      <!-- Original abstract illustration — intentionally not a photograph, and not the reference image -->
+      <svg viewBox="0 0 380 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract geometric portrait illustration">
+        <defs>
+          <linearGradient id="gradBody" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3E9484"/>
+            <stop offset="100%" stop-color="#2F6F63"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="380" height="440" fill="none"/>
+        <polygon points="190,40 300,110 300,250 190,320 80,250 80,110" fill="#1F2530" stroke="#E3A857" stroke-width="1.5"/>
+        <polygon points="190,90 260,130 260,230 190,270 120,230 120,130" fill="url(#gradBody)"/>
+        <circle cx="190" cy="165" r="34" fill="#F7F5F0" opacity="0.92"/>
+        <rect x="150" y="230" width="80" height="60" rx="6" fill="#161A22"/>
+        <polygon points="190,320 300,250 300,395 190,440 80,395 80,250" fill="#1F2530" opacity="0.85"/>
+        <circle cx="150" cy="150" r="4" fill="#E3A857"/>
+        <circle cx="230" cy="150" r="4" fill="#E3A857"/>
+        <path d="M170 185 Q190 200 210 185" stroke="#161A22" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <div class="status-bar">
+    <div class="wrap">
+      <span><span class="status-dot">●</span> available for new projects</span>
+      <span>UTF-8</span>
+      <span>Ln 5, Col 12</span>
+      <span>Remote / IST (UTC+5:30)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-illustration">
+      <svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Second abstract illustration accompanying the about section">
+        <rect x="20" y="20" width="260" height="300" rx="4" fill="#EBE5D6" stroke="#2A2E35" stroke-opacity="0.15"/>
+        <circle cx="150" cy="120" r="52" fill="#2F6F63"/>
+        <rect x="90" y="185" width="120" height="90" rx="10" fill="#161A22"/>
+        <rect x="60" y="250" width="180" height="14" rx="4" fill="#E3A857"/>
+        <circle cx="150" cy="115" r="18" fill="#F7F5F0"/>
+      </svg>
+    </div>
+    <div class="about-copy">
+      <div class="section-head">
+        <span class="eyebrow mono">$ cat about.md</span>
+        <h2>About Me</h2>
+        <p>I'm a developer who blends hands-on engineering with the habit of explaining it clearly — five years spent shipping production web software and just as long teaching ICT students how it all fits together.</p>
+      </div>
+      <p>My work follows the full lifecycle: planning, designing, building, testing, and deploying software that ranges from marketing websites to internal tools and small mobile apps. I care as much about maintainable code as I do about the person who inherits it after me.</p>
+      <p>Outside of client work, I lecture part-time on web systems and software engineering fundamentals — which keeps me honest about writing code other people can actually read.</p>
+      <div class="config-list">
+        <div class="config-row"><span>years_experience</span><span>5</span></div>
+        <div class="config-row"><span>projects_shipped</span><span>40+</span></div>
+        <div class="config-row"><span>students_taught</span><span>300+</span></div>
+        <div class="config-row"><span>primary_stack</span><span>JS / React / Node</span></div>
+      </div>
+      <a href="#contact" class="btn btn-dark resume-btn">Download Résumé ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section-alt" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ services --list</span>
+      <h2>What I Can Build For You</h2>
+      <p>From a single landing page to a full internal platform — scoped clearly, delivered on schedule.</p>
+    </div>
+    <div class="card-grid">
+      <div class="service-card">
+        <span class="cmd">build --web</span>
+        <h3>Web Development</h3>
+        <p>Responsive marketing sites, dashboards, and web apps built with modern, maintainable front-end and back-end code.</p>
+      </div>
+      <div class="service-card">
+        <span class="cmd">build --app</span>
+        <h3>App Development</h3>
+        <p>Lightweight mobile and cross-platform apps, from prototype through to app-store-ready release.</p>
+      </div>
+      <div class="service-card">
+        <span class="cmd">teach --ict</span>
+        <h3>Training &amp; Lecturing</h3>
+        <p>Workshops and structured courses on web fundamentals, software engineering practice, and system design.</p>
+      </div>
+      <div class="service-card">
+        <span class="cmd">audit --systems</span>
+        <h3>Systems Consulting</h3>
+        <p>Code and architecture reviews that flag risk early and leave your team with a clear, prioritized fix list.</p>
+      </div>
+      <div class="service-card">
+        <span class="cmd">migrate --legacy</span>
+        <h3>Legacy Modernization</h3>
+        <p>Careful, incremental modernization of older codebases without disrupting what already works.</p>
+      </div>
+      <div class="service-card">
+        <span class="cmd">support --ongoing</span>
+        <h3>Ongoing Support</h3>
+        <p>Retainer-based maintenance, monitoring, and small feature work once your product is live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section-dark" id="skill">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ skills --verbose</span>
+      <h2>Skill Set</h2>
+      <p>Core tools and languages I reach for most, kept current through client work and the courses I teach.</p>
+    </div>
+    <div class="skills-list">
+      <div class="skill-row">
+        <div class="skill-label"><span>JavaScript / TypeScript</span><span>92%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><span>React / Front-end Architecture</span><span>88%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><span>Node.js / APIs</span><span>85%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><span>Databases (SQL / NoSQL)</span><span>80%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><span>Systems &amp; Curriculum Design</span><span>84%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:84%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><span>DevOps / CI Pipelines</span><span>75%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonial">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ testimonials --recent</span>
+      <h2>What Clients Say</h2>
+      <p>A few notes from people I've built with and taught alongside.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"Morgan rebuilt our booking system in half the time we'd budgeted, and actually documented it so our own team could maintain it after."</p>
+        <div class="testi-person">
+          <div class="avatar-mono">DP</div>
+          <div>
+            <div class="testi-name">Dana Park</div>
+            <div class="testi-role">Operations Lead, Northline Co.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"The clearest technical instructor I've worked with — explains systems the way an engineer would want them explained."</p>
+        <div class="testi-person">
+          <div class="avatar-mono">RS</div>
+          <div>
+            <div class="testi-name">Ravi Subramaniam</div>
+            <div class="testi-role">Program Coordinator, ICT Institute</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"Delivered a working prototype in a week, then kept improving it based on real user feedback without scope creep."</p>
+        <div class="testi-person">
+          <div class="avatar-mono">LT</div>
+          <div>
+            <div class="testi-name">Lena Torres</div>
+            <div class="testi-role">Founder, Fieldwork Studio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section-dark" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ git log --experience</span>
+      <h2>Experience</h2>
+      <p>A working history, most recent first.</p>
+    </div>
+    <div class="timeline">
+      <div class="commit">
+        <div class="commit-hash">2024 — present</div>
+        <h3>Senior Software Developer</h3>
+        <div class="org">Northline Co.</div>
+        <p>Leading front-end architecture for a suite of internal tools, mentoring two junior developers, and owning the CI pipeline.</p>
+      </div>
+      <div class="commit">
+        <div class="commit-hash">2022 — 2024</div>
+        <h3>ICT Lecturer (Part-time)</h3>
+        <div class="org">Coastal Technical Institute</div>
+        <p>Designed and delivered a systems-design curriculum for 300+ students across three cohorts, alongside client development work.</p>
+      </div>
+      <div class="commit">
+        <div class="commit-hash">2020 — 2022</div>
+        <h3>Full-Stack Developer</h3>
+        <div class="org">Fieldwork Studio</div>
+        <p>Built and shipped client web applications end-to-end, from initial scoping through deployment and post-launch support.</p>
+      </div>
+      <div class="commit">
+        <div class="commit-hash">2019 — 2020</div>
+        <h3>Junior Developer</h3>
+        <div class="org">Basecamp Digital</div>
+        <p>Started out on front-end bug fixes and small features, then moved into building complete page templates independently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section id="works">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ ls ./works</span>
+      <h2>Selected Works</h2>
+      <p>A sample of recent projects, spanning client sites, internal tools, and teaching materials.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#2F6F63,#161A22);">booking-system.app</div>
+        <div class="work-body">
+          <h3>Northline Booking Platform</h3>
+          <p>A scheduling and booking system rebuilt for speed, with a self-serve admin dashboard.</p>
+          <div class="tag-row"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
+          <a href="#" class="work-link">View project →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#E3A857,#161A22);">fieldwork.studio</div>
+        <div class="work-body">
+          <h3>Fieldwork Studio Site</h3>
+          <p>A portfolio and case-study site for a small design studio, built for fast content updates.</p>
+          <div class="tag-row"><span class="tag">Next.js</span><span class="tag">Headless CMS</span></div>
+          <a href="#" class="work-link">View project →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#161A22,#2F6F63);">curriculum.kit</div>
+        <div class="work-body">
+          <h3>ICT Curriculum Toolkit</h3>
+          <p>An interactive teaching toolkit covering systems design fundamentals, used across three cohorts.</p>
+          <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Education</span></div>
+          <a href="#" class="work-link">View project →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#1F2530,#E3A857);">basecamp.pages</div>
+        <div class="work-body">
+          <h3>Basecamp Digital Pages</h3>
+          <p>A set of marketing landing pages optimized for load time and conversion.</p>
+          <div class="tag-row"><span class="tag">HTML/CSS</span><span class="tag">Performance</span></div>
+          <a href="#" class="work-link">View project →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="section-alt" id="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ ls ./blog --latest</span>
+      <h2>From the Blog</h2>
+      <p>Notes on building software and teaching it, written as I go.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <span class="blog-date">June 2026</span>
+        <h3>Teaching Systems Design Without the Jargon</h3>
+        <p>A few habits that made the concept click for students who'd never written a line of code.</p>
+        <a href="#" class="work-link">Read more →</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-date">April 2026</span>
+        <h3>What I Check Before Any Legacy Migration</h3>
+        <p>A short checklist that's saved every migration project I've run from turning into a rewrite.</p>
+        <a href="#" class="work-link">Read more →</a>
+      </div>
+      <div class="blog-card">
+        <span class="blog-date">February 2026</span>
+        <h3>Scoping Client Projects Honestly</h3>
+        <p>How I estimate timelines that actually hold up, and what to do when they don't.</p>
+        <a href="#" class="work-link">Read more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section-dark" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">$ contact --send</span>
+      <h2>Contact Us</h2>
+      <p>Have a project in mind or a course to plan? Tell me about it.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-row"><span class="info-label">email</span><span>hello@morganreyes.dev</span></div>
+        <div class="info-row"><span class="info-label">phone</span><span>+91 00000 00000</span></div>
+        <div class="info-row"><span class="info-label">based in</span><span>Chennai, India (remote-friendly)</span></div>
+        <div class="social-row">
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">Twitter/X</a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form — connect it to your own form handler (e.g. Formspree or Netlify Forms) to receive messages.');">
+        <div class="form-row-double">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="What's this about?">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me a bit about the project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid" style="justify-self:start;">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Morgan Reyes. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#works">Works</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
