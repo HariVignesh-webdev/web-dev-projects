@@ -55,7 +55,7 @@ header {
 
 .hero {
     background-color: rgb(240, 252, 255);
-    height: 500px;
+    height: 69vh;
     width: 1356px;
     display: flex;
     gap: 100px;
@@ -241,4 +241,18 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 22px;
+}
+@media (max-width: 480px){
+   header
+    {
+        display:flex;
+        width: 500px;
+        flex-wrap:wrap ;
+        height: 150px;
+        align-items: end;
+    }
+    .hero{
+       width: 514px;
+    }    
+    
 }
